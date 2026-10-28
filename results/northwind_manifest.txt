@@ -1,0 +1,19 @@
+source: hr.csv
+dataset: northwind_hr
+canaries: Payroll Specialist
+
+source: finance.csv
+dataset: northwind_finance
+canaries: Treasury Analyst
+
+source: legal.csv
+dataset: northwind_legal
+canaries: Privacy Officer
+
+source: marketing.csv
+dataset: northwind_marketing
+canaries: SEO Specialist
+
+source: employees_master.csv
+dataset: northwind_employees_master
+canaries: FIN;HR;LEG

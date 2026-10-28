@@ -1,0 +1,38 @@
+department: legal
+dataset: legal_confidential
+
+## Section 8: Legal and Compliance
+
+| Owner | Audience | Classification |
+|---|---|---|
+| Priyanka Ratnayake, General Counsel | Legal team and Management Board | Legal Confidential — Privileged |
+
+### 8.1 Summary
+
+One new customer claim, one open licence issue and good progress on the new data processing agreement.
+
+### 8.2 Legal indicators
+
+| Metric | Q2 2026 | Q3 2026 | Q3 target |
+|---|---|---|---|
+| Open disputes | 1 | 2 | - |
+| Customers on the new data processing agreement | 0 | 212 | 400 |
+
+### 8.3 Updates
+
+- Kirkwall Retail Group has sent a formal notice claiming service credits of EUR 240,000 for the 2 September outage. Our position is that the contract caps service credits at 10 percent of monthly fees, about EUR 9,500; the claim is tracked as LGL-2231.
+- Shipping the AGPL-licensed reporting library in the on-premise edition could oblige us to publish our source code; the matter is tracked as LGL-2207.
+- A patent application for the sync conflict-resolution method was filed with the European Patent Office on 3 July under reference EP-26-118.
+- We updated the data processing agreement to the new standard contractual clauses. 212 of 400 customers have signed the new version.
+
+### 8.4 Risks
+
+| Risk | Owner | Rating | Mitigation |
+|---|---|---|---|
+| AGPL licence in the reporting module (LGL-2207) | General Counsel | High | Replace the library before release 5.3 |
+
+### 8.5 Actions and decisions
+
+- Respond to the Kirkwall Retail Group notice — owner: General Counsel — due 6 November.
+
+*End of Section 8*

@@ -1,0 +1,27 @@
+employee_id,first_name,last_name,email,dept_code,department,job_title,role_type,allocation_pct,dept_start_date,manager_id,location,employment_type,hire_date,is_active
+EMP0001,Noah,Schmidt,noah.schmidt@northwind-mock.com,FIN,Finance,CFO,Primary,100,2023-04-26,,Munich,Full-time,2023-04-26,TRUE
+EMP0002,Lena,Jansen,lena.jansen@northwind-mock.com,FIN,Finance,AP Specialist,Primary,100,2016-02-24,EMP0001,Remote,Full-time,2016-02-24,TRUE
+EMP0004,Priya,Wang,priya.wang@northwind-mock.com,FIN,Finance,Accountant,Secondary,40,2017-04-21,EMP0001,Remote,Full-time,2015-04-19,TRUE
+EMP0006,Anna,Becker,anna.becker@northwind-mock.com,FIN,Finance,Controller,Secondary,30,2022-11-08,EMP0001,Colombo,Full-time,2022-10-30,TRUE
+EMP0008,Marie,Fischer,marie.fischer@northwind-mock.com,FIN,Finance,AP Specialist,Secondary,20,2021-05-12,EMP0001,Munich,Full-time,2019-01-10,TRUE
+EMP0013,Laura,Fischer,laura.fischer@northwind-mock.com,FIN,Finance,Financial Analyst,Secondary,20,2020-03-12,EMP0001,Munich,Full-time,2019-04-06,FALSE
+EMP0016,Clara,Silva,clara.silva@northwind-mock.com,FIN,Finance,Accountant,Primary,50,2023-03-06,EMP0001,Hamburg,Full-time,2023-03-06,TRUE
+EMP0018,Julia,Müller,julia.mueller@northwind-mock.com,FIN,Finance,Treasury Analyst,Secondary,40,2018-04-08,EMP0001,Berlin,Part-time,2017-07-27,TRUE
+EMP0020,Omar,Novak,omar.novak@northwind-mock.com,FIN,Finance,Controller,Primary,60,2018-07-12,EMP0001,Hamburg,Full-time,2018-07-12,TRUE
+EMP0021,Oskar,Nakamura,oskar.nakamura@northwind-mock.com,FIN,Finance,Treasury Analyst,Secondary,40,2020-08-04,EMP0001,Hamburg,Full-time,2020-02-23,TRUE
+EMP0024,Laura,Wagner,laura.wagner@northwind-mock.com,FIN,Finance,Financial Analyst,Primary,100,2020-09-18,EMP0001,Colombo,Full-time,2020-09-18,TRUE
+EMP0025,Jonas,Fischer,jonas.fischer@northwind-mock.com,FIN,Finance,Controller,Primary,100,2016-09-18,EMP0001,Hamburg,Full-time,2016-09-18,FALSE
+EMP0030,Jan,Becker,jan.becker@northwind-mock.com,FIN,Finance,Financial Analyst,Secondary,50,2021-09-14,EMP0001,Berlin,Contractor,2020-02-02,TRUE
+EMP0032,Emma,Nakamura,emma.nakamura@northwind-mock.com,FIN,Finance,Accountant,Primary,100,2018-05-07,EMP0001,Remote,Full-time,2018-05-07,TRUE
+EMP0035,Noah,Neumann,noah.neumann@northwind-mock.com,FIN,Finance,AP Specialist,Secondary,20,2025-09-06,EMP0001,Munich,Full-time,2024-11-08,TRUE
+EMP0037,Mia,Silva,mia.silva@northwind-mock.com,FIN,Finance,Controller,Primary,50,2023-08-03,EMP0001,Hamburg,Full-time,2023-08-03,TRUE
+EMP0039,Chen,Zimmermann,chen.zimmermann@northwind-mock.com,FIN,Finance,AP Specialist,Primary,100,2017-05-17,EMP0001,Remote,Full-time,2017-05-17,TRUE
+EMP0040,Hannah,Novak,hannah.novak@northwind-mock.com,FIN,Finance,Treasury Analyst,Primary,100,2018-06-30,EMP0001,Colombo,Contractor,2018-06-30,TRUE
+EMP0042,Max,Koch,max.koch@northwind-mock.com,FIN,Finance,Financial Analyst,Primary,70,2015-09-20,EMP0001,Munich,Full-time,2015-09-20,TRUE
+EMP0044,Jonas,Koch,jonas.koch@northwind-mock.com,FIN,Finance,Financial Analyst,Secondary,30,2017-05-15,EMP0001,Berlin,Part-time,2015-10-04,TRUE
+EMP0047,Max,Perera,max.perera@northwind-mock.com,FIN,Finance,Finance Manager,Primary,80,2024-01-21,EMP0001,Colombo,Full-time,2024-01-21,TRUE
+EMP0048,Emma,Rossi,emma.rossi@northwind-mock.com,FIN,Finance,AP Specialist,Secondary,30,2021-09-14,EMP0001,Munich,Full-time,2019-11-01,TRUE
+EMP0051,Ida,Wagner,ida.wagner@northwind-mock.com,FIN,Finance,Treasury Analyst,Primary,100,2019-09-25,EMP0001,Hamburg,Full-time,2019-09-25,TRUE
+EMP0054,Nils,Perera,nils.perera@northwind-mock.com,FIN,Finance,Accountant,Primary,70,2017-05-25,EMP0001,Colombo,Part-time,2017-05-25,TRUE
+EMP0055,Clara,Braun,clara.braun@northwind-mock.com,FIN,Finance,Controller,Primary,100,2015-01-09,EMP0001,Colombo,Full-time,2015-01-09,TRUE
+EMP0056,Karl,Klein,karl.klein@northwind-mock.com,FIN,Finance,Controller,Primary,80,2019-09-29,EMP0001,Remote,Full-time,2019-09-29,TRUE

@@ -1,0 +1,26 @@
+[
+  {
+    "name": "kasun silva",
+    "kind": "person",
+    "datasets": {
+      "hr_confidential": "7d93769f-40e8-5c00-a606-73c0d2a87a21",
+      "finance_confidential": "7d93769f-40e8-5c00-a606-73c0d2a87a21"
+    }
+  },
+  {
+    "name": "amila rathnayake",
+    "kind": "person",
+    "datasets": {
+      "hr_confidential": "ecb9033b-d4c7-578b-8782-e089d83ab1a3",
+      "technology_confidential": "ecb9033b-d4c7-578b-8782-e089d83ab1a3"
+    }
+  },
+  {
+    "name": "bluewave logistics gmbh",
+    "kind": "organization",
+    "datasets": {
+      "finance_confidential": "152db818-cfd3-5b9e-93f8-512378df4843",
+      "legal_confidential": "152db818-cfd3-5b9e-93f8-512378df4843"
+    }
+  }
+]

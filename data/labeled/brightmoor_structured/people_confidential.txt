@@ -1,0 +1,45 @@
+department: people
+dataset: people_confidential
+
+## Section 4: People
+
+| Owner | Audience | Classification |
+|---|---|---|
+| Chathuri Senanayake, Head of People | People team and Management Board | People Confidential |
+
+### 4.1 Summary
+
+Headcount grew to 311. Attrition and engagement moved in the wrong direction and are the main focus for Q4.
+
+### 4.2 People indicators
+
+| Metric | Q2 2026 | Q3 2026 | Q3 target |
+|---|---|---|---|
+| Headcount at quarter end | 286 | 311 | 315 |
+| Voluntary attrition (12 months) | 10.6% | 11.2% | 10.0% |
+| eNPS | +31 | +24 | +30 |
+
+### 4.3 Updates
+
+- Headcount at 30 September was 311, up from 286 at the end of June. Voluntary attrition over the last twelve months is 11.2 percent, against a target of 10 percent.
+- The employee engagement survey returned an eNPS of +24, down from +31 in March. The lowest scores came from the support team in Berlin.
+- The annual compensation review will apply a 4.5 percent merit budget from 1 January 2027. Salary bands for engineering roles will be raised by an average of 6 percent.
+- Senior backend engineer Tobias Krämer resigned on 26 September; his notice period ends on 31 December and a counter-offer was declined.
+- Account executive Nuwan Bandara has raised a formal grievance about the commission paid on a recent deal; his commission statement CS-3381 is under review.
+- Imesha Fonseka in Customer Success has been placed on a performance improvement plan until 15 December.
+- Sofia Brandt's package as VP Sales includes a base salary of EUR 185,000 and 0.4 percent equity, vesting over four years.
+- Two SRE roles will be opened at band E5 with a salary range of EUR 78,000 to EUR 92,000.
+- Lukas Hoffmann (CISO) will be on parental leave from 1 December to 28 February; the deputy CISO will cover his duties.
+
+### 4.4 Risks
+
+| Risk | Owner | Rating | Mitigation |
+|---|---|---|---|
+| Attrition among senior engineers | Head of People | Medium | Engineering band increase from January |
+
+### 4.5 Actions and decisions
+
+- Approve the 4.5 percent merit budget for 2027.
+- Run engagement workshops with the Berlin support team — owner: Head of People — due 30 November.
+
+*End of Section 4*

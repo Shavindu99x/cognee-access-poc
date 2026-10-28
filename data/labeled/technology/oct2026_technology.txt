@@ -1,0 +1,16 @@
+department: technology
+dataset: technology_confidential
+
+NORDLIGHT SOLUTIONS — TECHNOLOGY AND SECURITY
+October 2026 management report, technology and security facts only.
+
+Security incident SEC-2026-031 was raised on 9 October after a phishing email reached 38 employees. Two employees entered their credentials before the link was blocked. Both accounts were reset within 40 minutes and no data loss was found.
+
+Amila Rathnayake presented the results of the phishing incident review.
+Complete phishing awareness training for all staff. Owner: Amila Rathnayake. Due 30 November.
+
+The migration of the finance ledger from the on-premises server LEDGER-01 to the cloud tenant is 70 percent complete and will finish on 15 November.
+
+Administrator credentials for the core systems were rotated on 20 October. The new credentials are stored in the password vault under entry VAULT-7781.
+
+Open IT tickets by department: Technology 14, Sales 6, Operations 9, Administration 3.

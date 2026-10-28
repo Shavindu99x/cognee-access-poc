@@ -1,0 +1,29 @@
+department: people
+dataset: brightmoor_people
+
+BRIGHTMOOR SOFTWARE — PEOPLE
+Q3 2026 management report, people facts only.
+
+Headcount at quarter end: Q2 286, Q3 311, target 315.
+
+The Colombo engineering hub now has 23 engineers. Senior backend engineer Tobias Krämer resigned on 26 September. His notice period ends on 31 December and a counter-offer was declined.
+
+Account executive Nuwan Bandara has raised a formal grievance about the commission paid on the Tessaro deal. The commission statement is CS-3381.
+
+Sofia Brandt joins Brightmoor as VP Sales on 1 November. Her package includes a base salary of EUR 185,000 and 0.4 percent equity, vesting over four years.
+
+Headcount at 30 September was 311, up from 286 at the end of June. Voluntary attrition over the last twelve months is 11.2 percent, against a target of 10 percent.
+
+The employee engagement survey returned an eNPS of +24, down from +31 in March. The lowest scores came from the support team in Berlin.
+
+The annual compensation review will apply a 4.5 percent merit budget from 1 January 2027. Salary bands for engineering roles will be raised by an average of 6 percent. The board is asked to approve the 2027 merit budget.
+
+One employee in Customer Success, Imesha Fonseka, has been placed on a performance improvement plan until 15 December.
+
+The executive team is evaluating a restructuring of the Berlin support team, which could affect up to 14 roles. This must not be communicated to employees before the board decision.
+
+Chathuri Senanayake will open both site reliability roles at band E5 with a salary range of EUR 78,000 to EUR 92,000.
+
+Lukas Hoffmann will be on parental leave from 1 December to 28 February, and the deputy CISO will cover his duties.
+
+Mareike Lorenz intends to step down as CEO at the end of 2027.

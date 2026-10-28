@@ -1,0 +1,55 @@
+source: brightmoor_structured_report_q3_2026.md
+unit: Section 1 Company Overview
+domain: company_general
+dataset: company_general
+canaries: passed 400 customers, summer party, travel policy, officially opened
+labeled_file: data/labeled/brightmoor_structured/company_general.txt
+
+source: brightmoor_structured_report_q3_2026.md
+unit: Section 2 Board and Strategy
+domain: board
+dataset: board_confidential
+canaries: Quillstream, 165 million, 14 roles, step down as CEO, succession committee, Corvane
+labeled_file: data/labeled/brightmoor_structured/board_confidential.txt
+
+source: brightmoor_structured_report_q3_2026.md
+unit: Section 3 Finance
+domain: finance
+dataset: finance_confidential
+canaries: 1,870,000, 21,650,000, INV-24417, 412,300, 9,800,000, EUR 150,000
+labeled_file: data/labeled/brightmoor_structured/finance_confidential.txt
+
+source: brightmoor_structured_report_q3_2026.md
+unit: Section 4 People
+domain: people
+dataset: people_confidential
+canaries: Tobias Krämer, CS-3381, EUR 185,000, Imesha Fonseka, 4.5 percent, parental leave, EUR 78,000
+labeled_file: data/labeled/brightmoor_structured/people_confidential.txt
+
+source: brightmoor_structured_report_q3_2026.md
+unit: Section 5 Sales, Marketing and Customer Success
+domain: gtm
+dataset: gtm_confidential
+canaries: 4,960,000, EUR 610,000, Brandvik, 830,000, 114%, 18 percent
+labeled_file: data/labeled/brightmoor_structured/gtm_confidential.txt
+
+source: brightmoor_structured_report_q3_2026.md
+unit: Section 6 Product and Engineering
+domain: engineering
+dataset: engineering_internal
+canaries: PM-0912, KESTREL, 47 minutes, spot instances, workflow designer, site reliability engineers
+labeled_file: data/labeled/brightmoor_structured/engineering_internal.txt
+
+source: brightmoor_structured_report_q3_2026.md
+unit: Section 7 Security and IT
+domain: security
+dataset: security_confidential
+canaries: SEC-INC-0814, PT-26-01, SOC 2, 37 accounts, billing system, Secret scanning
+labeled_file: data/labeled/brightmoor_structured/security_confidential.txt
+
+source: brightmoor_structured_report_q3_2026.md
+unit: Section 8 Legal and Compliance
+domain: legal
+dataset: legal_confidential
+canaries: LGL-2231, LGL-2207, EP-26-118, EUR 240,000, standard contractual clauses
+labeled_file: data/labeled/brightmoor_structured/legal_confidential.txt

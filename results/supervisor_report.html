@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Cognee access-control PoC — supervisor report</title>
+<style>
+  @page { size: A4; margin: 14mm 14mm 16mm 14mm; }
+  * { box-sizing: border-box; }
+  body { font-family: Arial, Helvetica, sans-serif; color: #1c1c1c; font-size: 11pt; line-height: 1.4; margin: 0; }
+  h1 { font-size: 20pt; line-height: 1.2; margin: 0 0 6px; }
+  h2 { font-size: 14pt; margin: 18px 0 6px; page-break-after: avoid; }
+  h3 { font-size: 12pt; margin: 12px 0 4px; page-break-after: avoid; }
+  p { margin: 0 0 8px; }
+  .meta { color: #555; font-size: 9.5pt; margin-bottom: 12px; }
+  .box { border: 1px solid #cfcfcf; padding: 8px 10px; margin: 10px 0 14px; page-break-inside: avoid; }
+  .box strong { display: block; margin-bottom: 4px; }
+  table { width: 100%; border-collapse: collapse; margin: 6px 0 10px; font-size: 9pt; page-break-inside: auto; }
+  th, td { border: 1px solid #d0d0d0; padding: 4px 6px; vertical-align: top; text-align: left; }
+  th { background: #f2f2f2; font-weight: 700; }
+  tr { page-break-inside: avoid; }
+  .pass { font-weight: 700; }
+  .steps { margin: 0; padding-left: 18px; }
+  .steps li { margin-bottom: 4px; }
+  svg { width: 100%; height: auto; display: block; }
+  .figure { border: 1px solid #d0d0d0; padding: 8px; margin: 8px 0 12px; page-break-inside: avoid; }
+  .caption { color: #555; font-size: 9pt; margin-top: 4px; }
+  .small { font-size: 9.5pt; color: #333; }
+</style>
+</head>
+<body>
+
+<h1>Cognee access-control proof of concept</h1>
+<p class="meta">17 October 2026 · Cognee 1.6.4 · Python 3.12.15 · Isolation run 14:43 · Grant/revoke run 14:53</p>
+
+<div class="box">
+  <strong>Result: the requirement is met at dataset level.</strong>
+  Two users each have two documents in a Cognee GraphRAG system. When the HR user asks a finance question, Cognee searches only the HR graph and the answer is “I don't have that information.” The finance document is not in the retrieved chunks or in the text sent to the model. Asking for the finance dataset by name returns HTTP 403 from Cognee before any retrieval.
+</div>
+
+<h2>1. What was asked</h2>
+<p>Build a proof of concept with two users and four documents, two documents for each user. Retrieval must happen inside Cognee's GraphRAG, not by filtering results in application code. A user who asks about the other department must be told the information is not available, and the restricted document must not be fetched. The refusal has to come from Cognee.</p>
+
+<h2>2. What was built</h2>
+<p>A data admin ingested four documents into two datasets. Each dataset is one permission boundary. With access control on, Cognee stores a separate graph file and a separate vector database for each dataset. The two end users are not superusers.</p>
+<table>
+  <thead>
+    <tr><th>Account</th><th>May read</th><th>Documents</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>hr.user@nordlight.poc</td><td>hr_confidential</td><td>hr_leave_policy.txt<br>hr_employee_records.txt</td></tr>
+    <tr><td>finance.user@nordlight.poc</td><td>finance_confidential</td><td>fin_q3_budget.txt<br>fin_vendor_payments.txt</td></tr>
+    <tr><td>data.admin@nordlight.poc</td><td>Both. Owns the data and grants read.</td><td>Ingests the four files. Not an end user of the proof.</td></tr>
+  </tbody>
+</table>
+<p>The overlap used as a trap is Kasun Silva. He is an employee in the HR records and an invoice approver in the finance register. In one shared graph he would connect the two departments.</p>
+
+<h2>3. Where Cognee makes the decision</h2>
+<ol class="steps">
+  <li>The caller passes the user into Cognee. Cognee identifies that user.</li>
+  <li>Cognee reads its ACL table and keeps only the datasets that user may read.</li>
+  <li>Cognee opens only those datasets' graph and vector files, then retrieves from them.</li>
+  <li>That retrieved context is what the model sees.</li>
+</ol>
+<p>This project's code does not remove forbidden text after Cognee responds. The tests record the datasets Cognee searched, the raw chunks, and the exact context given to the model.</p>
+<p class="small">The sentence “I don't have that information.” is set in the prompt so the model uses one wording when the retrieved context has no answer. The access decision is the earlier step: the other graph file is never opened.</p>
+
+<h2>4. Isolation tests — 16/16 passed</h2>
+<p>Eight checks, each run as both users. A check fails if any forbidden fact appears in the answer, the chunks, or the model context. Checks T2 to T5 also fail if nothing was retrieved, so a broken setup cannot pass by accident.</p>
+<table>
+  <thead>
+    <tr><th>User</th><th>Test</th><th>Result</th><th>What Cognee returned</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>HR</td><td>T1 Own question</td><td class="pass">PASS</td><td>Answered from hr_confidential. Own fact: 27 days of leave.</td></tr>
+    <tr><td>HR</td><td>T2 Finance question, model answer</td><td class="pass">PASS</td><td>“I don't have that information.” Searched only hr_confidential.</td></tr>
+    <tr><td>HR</td><td>T3 Same question, raw chunks, no model</td><td class="pass">PASS</td><td>2 chunks, both from hr_confidential.</td></tr>
+    <tr><td>HR</td><td>T3b Keyword search for finance secrets</td><td class="pass">PASS</td><td>Hits stayed in hr_confidential. No forbidden terms.</td></tr>
+    <tr><td>HR</td><td>T4 Exact text sent to the model</td><td class="pass">PASS</td><td>Context built only from hr_confidential.</td></tr>
+    <tr><td>HR</td><td>T5 Kasun Silva, multi-hop</td><td class="pass">PASS</td><td>Traversal stayed inside hr_confidential.</td></tr>
+    <tr><td>HR</td><td>T6 Direct read of the finance dataset</td><td class="pass">PASS</td><td>PermissionDeniedError, HTTP 403, before retrieval.</td></tr>
+    <tr><td>HR</td><td>T7 Write into the finance dataset</td><td class="pass">PASS</td><td>PermissionDeniedError, HTTP 403, on write.</td></tr>
+    <tr><td>Finance</td><td>T1 Own question</td><td class="pass">PASS</td><td>Answered from finance_confidential. Own fact: 4,870,000.</td></tr>
+    <tr><td>Finance</td><td>T2 HR question, model answer</td><td class="pass">PASS</td><td>“I don't have that information.” Searched only finance_confidential.</td></tr>
+    <tr><td>Finance</td><td>T3 Same question, raw chunks, no model</td><td class="pass">PASS</td><td>2 chunks, both from finance_confidential.</td></tr>
+    <tr><td>Finance</td><td>T3b Keyword search for HR secrets</td><td class="pass">PASS</td><td>Hits stayed in finance_confidential. No forbidden terms.</td></tr>
+    <tr><td>Finance</td><td>T4 Exact text sent to the model</td><td class="pass">PASS</td><td>Context built only from finance_confidential.</td></tr>
+    <tr><td>Finance</td><td>T5 Kasun Silva, multi-hop</td><td class="pass">PASS</td><td>Traversal stayed inside finance_confidential.</td></tr>
+    <tr><td>Finance</td><td>T6 Direct read of the HR dataset</td><td class="pass">PASS</td><td>PermissionDeniedError, HTTP 403, before retrieval.</td></tr>
+    <tr><td>Finance</td><td>T7 Write into the HR dataset</td><td class="pass">PASS</td><td>PermissionDeniedError, HTTP 403, on write.</td></tr>
+  </tbody>
+</table>
+<p class="small">Source: results/isolation_report.md, 17 October 2026, 14:43.</p>
+
+<h2>5. Control experiment: grant, then revoke</h2>
+<p>The HR user asked “What was the total approved operating budget for Q3 2026?” three times. The documents did not change. The only change was one ACL row. Script result: PASS.</p>
+<table>
+  <thead>
+    <tr><th>Stage</th><th>Datasets Cognee searched</th><th>Finance figure</th><th>Answer</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>A. Before grant</td><td>hr_confidential</td><td>None</td><td>I don't have that information.</td></tr>
+    <tr><td>B. After the admin grants read on finance</td><td>finance_confidential and hr_confidential</td><td>4,870,000 is visible</td><td>The budget figure appears.</td></tr>
+    <tr><td>C. After the admin revokes that read</td><td>hr_confidential</td><td>None</td><td>I don't have that information.</td></tr>
+  </tbody>
+</table>
+<p class="small">Source: step3_grant_revoke.py, 17 October 2026, 14:53. After the revoke, the ACL table again shows the HR user with read only on hr_confidential.</p>
+
+<h2>6. Knowledge graphs</h2>
+<p>These are two graphs, not one graph with hidden nodes. Cognee extracted 38 nodes and 71 edges for HR, and 37 nodes and 80 edges for finance. The drawings below keep the entity relationships a reviewer needs. Chunk and timestamp nodes are omitted. Names with a darker border — Kasun Silva, Nordlight Solutions, Operations, Technology — were extracted in both graphs. They are separate nodes. There is no edge from the HR Kasun to the finance Kasun.</p>
+
+<h3>HR graph — hr_confidential</h3>
+<div class="figure">
+<svg viewBox="0 0 720 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#444"/>
+    </marker>
+  </defs>
+  <line x1="168" y1="78" x2="210" y2="78" stroke="#444" marker-end="url(#arr)"/>
+  <line x1="338" y1="78" x2="380" y2="78" stroke="#444" marker-end="url(#arr)"/>
+  <line x1="100" y1="102" x2="100" y2="150" stroke="#444" marker-end="url(#arr)"/>
+  <line x1="274" y1="102" x2="274" y2="150" stroke="#444" marker-end="url(#arr)"/>
+  <line x1="274" y1="54" x2="274" y2="28" stroke="#444" marker-end="url(#arr)"/>
+  <line x1="448" y1="102" x2="500" y2="160" stroke="#444" marker-end="url(#arr)"/>
+  <line x1="560" y1="214" x2="500" y2="190" stroke="#444" marker-end="url(#arr)"/>
+  <line x1="620" y1="190" x2="500" y2="102" stroke="#444" marker-end="url(#arr)"/>
+  <rect x="20" y="54" width="148" height="48" rx="4" fill="#fff" stroke="#222"/>
+  <text x="94" y="74" text-anchor="middle" font-size="12" font-family="Arial">Tharushi Perera</text>
+  <text x="94" y="90" text-anchor="middle" font-size="10" font-family="Arial" fill="#444">reports to</text>
+  <rect x="210" y="54" width="128" height="48" rx="4" fill="#fff" stroke="#111" stroke-width="2"/>
+  <text x="274" y="82" text-anchor="middle" font-size="12" font-family="Arial">Kasun Silva</text>
+  <rect x="380" y="54" width="148" height="48" rx="4" fill="#fff" stroke="#222"/>
+  <text x="454" y="82" text-anchor="middle" font-size="12" font-family="Arial">Dilini Fernando</text>
+  <rect x="20" y="150" width="148" height="40" rx="4" fill="#fff" stroke="#111" stroke-width="2"/>
+  <text x="94" y="174" text-anchor="middle" font-size="12" font-family="Arial">Technology</text>
+  <rect x="210" y="150" width="128" height="40" rx="4" fill="#fff" stroke="#111" stroke-width="2"/>
+  <text x="274" y="174" text-anchor="middle" font-size="12" font-family="Arial">Operations</text>
+  <rect x="210" y="4" width="128" height="36" rx="4" fill="#fff" stroke="#222"/>
+  <text x="274" y="26" text-anchor="middle" font-size="11" font-family="Arial">Performance review</text>
+  <rect x="400" y="160" width="160" height="40" rx="4" fill="#fff" stroke="#111" stroke-width="2"/>
+  <text x="480" y="184" text-anchor="middle" font-size="12" font-family="Arial">Nordlight Solutions</text>
+  <rect x="560" y="214" width="148" height="48" rx="4" fill="#fff" stroke="#222"/>
+  <text x="634" y="234" text-anchor="middle" font-size="12" font-family="Arial">Leave policy 2026</text>
+  <text x="634" y="250" text-anchor="middle" font-size="10" font-family="Arial" fill="#444">owned by / managed by</text>
+  <text x="150" y="270" font-size="10" font-family="Arial" fill="#333">Also in this graph: annual leave, sick leave, remote work, parental leave, Lakehouse Foundations, PeopleDesk.</text>
+</svg>
+<p class="caption">HR entity view from the Cognee graph file. 38 nodes, 71 edges in the full graph. Kasun reports to Dilini and is Tharushi's manager. He is not connected to any invoice.</p>
+</div>
+
+<h3>Finance graph — finance_confidential</h3>
+<div class="figure">
+<svg viewBox="0 0 720 280" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arr2" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#444"/>
+    </marker>
+  </defs>
+  <line x1="168" y1="40" x2="210" y2="40" stroke="#444" marker-end="url(#arr2)"/>
+  <line x1="338" y1="40" x2="390" y2="40" stroke="#444" marker-end="url(#arr2)"/>
+  <line x1="168" y1="130" x2="230" y2="64" stroke="#444" marker-end="url(#arr2)"/>
+  <line x1="94" y1="64" x2="230" y2="190" stroke="#444" marker-end="url(#arr2)"/>
+  <line x1="358" y1="214" x2="390" y2="214" stroke="#444" marker-end="url(#arr2)"/>
+  <line x1="530" y1="214" x2="560" y2="214" stroke="#444" marker-end="url(#arr2)"/>
+  <rect x="20" y="16" width="148" height="48" rx="4" fill="#fff" stroke="#111" stroke-width="2"/>
+  <text x="94" y="44" text-anchor="middle" font-size="12" font-family="Arial">Nordlight Solutions</text>
+  <rect x="210" y="16" width="128" height="48" rx="4" fill="#fff" stroke="#222"/>
+  <text x="274" y="36" text-anchor="middle" font-size="12" font-family="Arial">Q3 2026 budget</text>
+  <text x="274" y="52" text-anchor="middle" font-size="10" font-family="Arial" fill="#444">covers Q3</text>
+  <rect x="390" y="16" width="120" height="48" rx="4" fill="#fff" stroke="#222"/>
+  <text x="450" y="44" text-anchor="middle" font-size="12" font-family="Arial">Q3 2026</text>
+  <rect x="540" y="16" width="160" height="48" rx="4" fill="#fff" stroke="#222"/>
+  <text x="620" y="36" text-anchor="middle" font-size="12" font-family="Arial">New data centre</text>
+  <text x="620" y="52" text-anchor="middle" font-size="10" font-family="Arial" fill="#444">board approved</text>
+  <rect x="20" y="110" width="148" height="40" rx="4" fill="#fff" stroke="#222"/>
+  <text x="94" y="134" text-anchor="middle" font-size="12" font-family="Arial">Ruwan Jayasinghe</text>
+  <rect x="190" y="190" width="168" height="48" rx="4" fill="#fff" stroke="#222"/>
+  <text x="274" y="218" text-anchor="middle" font-size="12" font-family="Arial">Vendor payments</text>
+  <rect x="390" y="190" width="140" height="48" rx="4" fill="#fff" stroke="#222"/>
+  <text x="460" y="210" text-anchor="middle" font-size="12" font-family="Arial">INV-90417</text>
+  <text x="460" y="226" text-anchor="middle" font-size="10" font-family="Arial" fill="#444">and INV-90468</text>
+  <rect x="560" y="190" width="140" height="48" rx="4" fill="#fff" stroke="#111" stroke-width="2"/>
+  <text x="630" y="218" text-anchor="middle" font-size="12" font-family="Arial">Kasun Silva</text>
+  <text x="20" y="268" font-size="10" font-family="Arial" fill="#333">Kasun approved the Bluewave Logistics invoices. His salary band and employee ID are not in this graph.</text>
+</svg>
+<p class="caption">Finance entity view from the Cognee graph file. 37 nodes, 80 edges in the full graph. Technology and Operations appear here as budget lines, not as the HR departments connected to Kasun's manager.</p>
+</div>
+<p class="small">Full interactive Cognee renders, opened in a browser: results/hr_confidential_graph.html and results/finance_confidential_graph.html. On disk each dataset has its own .lbug graph and its own .lance.db vector store under .cognee_system/databases.</p>
+
+<h2>7. The gap</h2>
+<div class="box">
+  <strong>Cognee 1.6.4 cannot keep one shared graph and authorize HR or Finance at the node.</strong>
+  An ACL row is a person, a permission (read, write, delete, or share), and a dataset. It has no node, document, or field. With access control on, Cognee opens a separate graph file per dataset. It does not open one graph and then hide individual nodes.
+</div>
+<table>
+  <thead>
+    <tr><th>Requirement</th><th>This proof</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Two users, four documents, GraphRAG</td><td>Met. Two documents per end user. Retrieval goes through Cognee's graph and vector search.</td></tr>
+    <tr><td>A restricted document is not fetched</td><td>Met. Shown without trusting the model sentence: raw chunks, keyword search, and the exact model context.</td></tr>
+    <tr><td>The refusal comes from Cognee</td><td>Met for the access decision. The words “I don't have that information.” are prompt wording used when that context has no answer.</td></tr>
+    <tr><td>One graph, with a node-level check</td><td>Not available. One dataset would be one graph, and read on that dataset would expose every node, including the other department.</td></tr>
+  </tbody>
+</table>
+<p>If all four documents were placed in one dataset, the two Kasun Silva nodes could become one node, and the HR user could traverse from the employee record into the vendor payments. A filter written in this project after Cognee returns results would be application filtering, which this proof was built to avoid.</p>
+<p class="small">Other limits to state in the review: permissions are per dataset, not per field. A superuser bypasses the ACL. The application still has to pass the correct user into the SDK; Cognee does not guess who is asking.</p>
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+department: legal
+dataset: brightmoor_legal
+
+BRIGHTMOOR SOFTWARE — LEGAL AND COMPLIANCE
+Q3 2026 management report, legal facts only.
+
+A dependency scan found that the reporting module uses a library under the AGPL-3.0 licence. Legal advises that shipping it in the on-premise edition could oblige Brightmoor to publish its source code. The matter is tracked as LGL-2207 and the library must be replaced before the 5.3 release.
+
+Kirkwall Retail Group has sent a formal notice claiming service credits of EUR 240,000 for the 2 September outage. Brightmoor's position is that the contract caps service credits at 10 percent of monthly fees, about EUR 9,500. The claim is tracked as LGL-2231.
+
+A patent application for the sync conflict-resolution method was filed with the European Patent Office on 3 July under reference EP-26-118.
+
+Brightmoor updated the data processing agreement to the new standard contractual clauses. 212 of 400 customers have signed the new version.

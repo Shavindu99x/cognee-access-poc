@@ -1,0 +1,34 @@
+department: company_general
+dataset: company_general
+
+## Section 1: Company Overview
+
+| Owner | Audience | Classification |
+|---|---|---|
+| Office of the CEO | All employees | Internal |
+
+### 1.1 Summary
+
+Q3 2026 was the strongest quarter in Brightmoor's history. We shipped Brightmoor Flow 5.2, opened the Colombo engineering hub and passed 400 customers.
+
+### 1.2 Key dates
+
+| Event | Date |
+|---|---|
+| Colombo engineering hub officially opened | 4 August 2026 |
+| Sofia Brandt joins as VP Sales | 1 November 2026 |
+| Company summer party, Berlin office | 7 November 2026 |
+| Next quarterly report | January 2027 |
+
+### 1.3 Updates
+
+- The Colombo engineering hub was officially opened on 4 August with a team event for all staff.
+- Sofia Brandt joins Brightmoor as VP Sales on 1 November.
+- The company summer party will take place on 7 November at the Berlin office.
+- The updated travel policy is available on the intranet.
+
+### 1.4 Actions and decisions
+
+- Confirm attendance for the summer party by 31 October — owner: Office Management.
+
+*End of Section 1*

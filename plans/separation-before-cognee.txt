@@ -1,0 +1,64 @@
+Plan: separate a submission before Cognee
+Status: not built. This is the plan to return to.
+Cognee stays the store and the lock. These steps only write the files Cognee is allowed to receive.
+
+The submission may be one file or several. Audiences may already be named, or not.
+A fact may be a section, a paragraph, a list, or a table column. It is not assumed to be one sentence.
+Audience names come from this organization's access map. A past report is not a template.
+
+Map
+1. Recover units
+   Tool: Docling (MIT, local)
+   In: the submitted file or files
+   Out: paragraphs, lists, section headers, and table columns with their headers
+   Rule: a section whose header already names an audience on the access map stays whole.
+         A header that is only a topic is not an audience.
+
+2. Put names on pronouns
+   Tool: fastcoref (MIT, local)
+   In: each unit from step 1
+   Out: the same unit, with he / she / his / her replaced by the person named earlier
+   Rule: do this before any audience label is chosen.
+         Do not use Maverick here. It scores higher and its license is non-commercial.
+
+3. Label each span from this organization's access map
+   Tool: GLiNER2 (Apache-2.0, CPU, local)
+   In: the unit, plus the audience names and a one-line description of each
+   Out: an audience for the span, or no label, plus a confidence score
+   Rule: labels are supplied at call time. Do not train this model on the Nordlight or Brightmoor reports.
+         A score under the cutoff is held back. It is not guessed.
+
+4. Confirm with a model trained only on this organization's accepted splits
+   Tool: SetFit with ModernBERT embeddings (Apache-2.0)
+   In: spans a person has already accepted for this organization
+   Out: a second audience label
+   Rule: a new organization has no such model until it has accepted examples.
+         Do not train one model on another organization's reports.
+
+5. Decide what may be stored
+   Store with no person only when all of these are true:
+   - Docling produced a clean block, or a clean table column
+   - the section was already labeled, or GLiNER2 and SetFit name the same audience above the cutoff
+   - the span is not held back
+   - the gate passes: one audience in the file, no marker from another audience, and the dataset belongs to this organization
+   Otherwise show the split and wait for a person to accept it.
+   Accepting the split does not store a held-back fact.
+
+6. Cognee
+   In: one accepted file per audience
+   Call: remember(), one dataset per audience, owner only, not a superuser
+   Then: grant read from the access map
+   The cross-audience link is still built for the question only. It is not written back.
+
+What not to add
+- Topic clustering. It invents audiences from headings.
+- One generative model as the only judge.
+- A classifier trained on the test reports and reused for every company.
+- Docling, fastcoref, GLiNER2, or SetFit as a replacement for Cognee.
+
+Order to build later
+1. Docling units, including table columns.
+2. The gate on those units, with no new model.
+3. fastcoref, then the same gate.
+4. GLiNER2 with the access map as the label list. Low confidence is held back.
+5. SetFit only after this organization has accepted splits. Auto-store only on agreement.

@@ -1,0 +1,39 @@
+owner: data.admin@nordlight.poc
+owner is not a superuser
+access control: on
+
+These audiences are Brightmoor's. They are not added to the Nordlight datasets.
+
+domain: company_general
+dataset: brightmoor_general
+read: general.user@brightmoor.poc, director.user@brightmoor.poc
+
+domain: product
+dataset: brightmoor_product
+read: product.user@brightmoor.poc, director.user@brightmoor.poc
+
+domain: finance
+dataset: brightmoor_finance
+read: finance.user@brightmoor.poc, director.user@brightmoor.poc
+
+domain: sales
+dataset: brightmoor_sales
+read: sales.user@brightmoor.poc, director.user@brightmoor.poc
+
+domain: people
+dataset: brightmoor_people
+read: people.user@brightmoor.poc, director.user@brightmoor.poc
+
+domain: it_security
+dataset: brightmoor_it_security
+read: security.user@brightmoor.poc, director.user@brightmoor.poc
+
+domain: legal
+dataset: brightmoor_legal
+read: legal.user@brightmoor.poc, director.user@brightmoor.poc
+
+domain: strategy
+dataset: brightmoor_strategy
+read: strategy.user@brightmoor.poc, director.user@brightmoor.poc
+
+The cover line "Classification: Confidential" is not an instruction to store the whole report in one dataset. It was not followed.

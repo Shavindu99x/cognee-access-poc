@@ -1,0 +1,13 @@
+department: finance
+dataset: finance_confidential
+
+NORDLIGHT SOLUTIONS — FINANCE
+Document: Q4 payments section, separated from the management briefing
+Document reference: FIN-BRIEF-2290
+Classification: FINANCE CONFIDENTIAL
+
+Kasun Silva approved invoice INV-91002.
+Vendor: Northwind Freight.
+Amount: EUR 15,800.
+Payment date: 3 October 2026.
+Register reference: FIN-BRIEF-2290.

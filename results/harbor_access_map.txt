@@ -1,0 +1,17 @@
+organization: harbor
+owner: harbor.admin@harbor.poc
+owner is not a superuser
+access control: on
+The dataset is named before ingestion. The file is not read to choose or check it.
+
+domain: hr
+dataset: harbor_hr
+read: hr.user@harbor.poc, director.user@harbor.poc
+
+domain: finance
+dataset: harbor_finance
+read: finance.user@harbor.poc, director.user@harbor.poc
+
+domain: legal
+dataset: harbor_legal
+read: legal.user@harbor.poc, director.user@harbor.poc

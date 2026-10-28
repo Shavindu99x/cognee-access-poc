@@ -1,0 +1,3 @@
+Harbor payments record for the finance department.
+
+Leena Voss submitted expense EXP-4419 for EUR 3,250 charged to cost center CC-17. Leena Voss's start date on the payment file is 1 March 2024. The Harbor audit fee AUD-19 is EUR 18,000.

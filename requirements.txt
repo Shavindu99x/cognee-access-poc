@@ -1,0 +1,2 @@
+# Pinned so the PoC behaves exactly as tested. Cognee's API moves fast.
+cognee==1.6.4

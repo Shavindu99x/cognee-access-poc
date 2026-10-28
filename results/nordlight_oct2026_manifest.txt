@@ -1,0 +1,41 @@
+source: management_report_oct2026_1.md
+unit: foreword framing, office move, next-report date
+domain: wide
+dataset: nordlight_general
+canaries: Colombo delivery centre, Berlin showroom, Spreeufer 12, 26 November 2026
+labeled_file: data/labeled/nordlight_oct2026/general.txt
+
+source: management_report_oct2026_1.md
+unit: people, suspension, promotion, retention bonus amount, resignation
+domain: people
+dataset: nordlight_people
+canaries: EMP-6043, band G6, P-118, DC-2026-07, EUR 12,000, Tharushi Perera
+labeled_file: data/labeled/nordlight_oct2026/people.txt
+
+source: management_report_oct2026_1.md
+unit: revenue, cash, invoices, budgets, penalty booking, bonus charge without the amount
+domain: finance
+dataset: nordlight_finance
+canaries: INV-91022, RCF-55120, CC-410, EUR 64,800, EUR 350,000, EUR 18,500
+labeled_file: data/labeled/nordlight_oct2026/finance.txt
+
+source: management_report_oct2026_1.md
+unit: contracts, pipeline, churn
+domain: sales
+dataset: nordlight_sales
+canaries: Fjordline, Havbris, EUR 5,860,000, EUR 1,135,000
+labeled_file: data/labeled/nordlight_oct2026/sales.txt
+
+source: management_report_oct2026_1.md
+unit: security incident, ledger migration, credentials, IT tickets
+domain: it_security
+dataset: nordlight_it_security
+canaries: SEC-2026-031, VAULT-7781, LEDGER-01
+labeled_file: data/labeled/nordlight_oct2026/it_security.txt
+
+source: management_report_oct2026_1.md
+unit: dispute, data requests, liability cap, penalty clause
+domain: legal
+dataset: nordlight_legal
+canaries: CL-4410, clause 14.2, EUR 2,000,000
+labeled_file: data/labeled/nordlight_oct2026/legal.txt

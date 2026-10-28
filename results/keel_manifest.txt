@@ -1,0 +1,7 @@
+source: hr.txt
+dataset: keel_hr
+canaries: EMP-3304, band H5, 19 days
+
+source: finance.txt
+dataset: keel_finance
+canaries: EMP-3304, EXP-1188, EUR 4,800, CC-42

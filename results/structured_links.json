@@ -1,0 +1,47 @@
+[
+  {
+    "name": "sofia brandt",
+    "kind": "person",
+    "datasets": {
+      "company_general": "a6da87b2-f08b-5542-b6ad-41250058ab37",
+      "people_confidential": "a6da87b2-f08b-5542-b6ad-41250058ab37"
+    },
+    "stored_as": "sofia brandt"
+  },
+  {
+    "name": "lukas hoffmann",
+    "kind": "person",
+    "datasets": {
+      "people_confidential": "b46ea04b-86ac-5370-aebe-17c6b3837846",
+      "security_confidential": "b46ea04b-86ac-5370-aebe-17c6b3837846"
+    },
+    "stored_as": "lukas hoffmann"
+  },
+  {
+    "name": "medrava",
+    "kind": "organization",
+    "datasets": {
+      "finance_confidential": "757ecc52-e1b2-5d23-b1b6-35d115dca271",
+      "gtm_confidential": "757ecc52-e1b2-5d23-b1b6-35d115dca271"
+    },
+    "stored_as": "medrava health gmbh"
+  },
+  {
+    "name": "kirkwall",
+    "kind": "organization",
+    "datasets": {
+      "gtm_confidential": "be298910-eff2-530a-a45f-dc0a0e6232e4",
+      "legal_confidential": "be298910-eff2-530a-a45f-dc0a0e6232e4"
+    },
+    "stored_as": "kirkwall retail group"
+  },
+  {
+    "name": "brightmoor flow",
+    "kind": "product",
+    "datasets": {
+      "company_general": "070e4c02-c222-5915-b687-5c343f69429d",
+      "engineering_internal": "070e4c02-c222-5915-b687-5c343f69429d"
+    },
+    "stored_as": "brightmoor flow 5.2"
+  }
+]

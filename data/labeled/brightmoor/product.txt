@@ -1,0 +1,15 @@
+department: product
+dataset: brightmoor_product
+
+BRIGHTMOOR SOFTWARE — PRODUCT AND ENGINEERING
+Q3 2026 management report, product and engineering facts only.
+
+Brightmoor Flow 5.2 was released on 18 August. It introduced the workflow designer, audit trails for admin actions and a 35 percent faster sync engine.
+
+Platform uptime for the quarter was 99.95 percent. The longest outage lasted 47 minutes on 2 September and was caused by a failed database failover in the Frankfurt region. The post-mortem is filed as PM-0912.
+
+Engineering moved 60 percent of batch workloads to spot instances during the quarter.
+
+The Q4 roadmap prioritises single sign-on for all plans, the public API v3 (internal code name KESTREL) and offline mode for the mobile app.
+
+Jonas Feldmann reported that the multi-region failover project needs two additional site reliability engineers.

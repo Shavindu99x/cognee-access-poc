@@ -1,0 +1,23 @@
+NORDLIGHT SOLUTIONS — Q4 MANAGEMENT BRIEFING
+Source id: MIXED-SOURCE-DO-NOT-INGEST
+This file contains two departments. It must be separated and labeled before Cognee ingest.
+
+# People
+
+Document reference: HR-BRIEF-8841
+Classification: HR CONFIDENTIAL
+
+Kasun Silva, employee EMP-5521, completed leadership review LEAD-8841 on 2 October 2026.
+His line manager for that review was Dilini Fernando.
+The review confirmed his role as Senior Procurement Manager in Operations.
+
+# Payments
+
+Document reference: FIN-BRIEF-2290
+Classification: FINANCE CONFIDENTIAL
+
+Kasun Silva approved invoice INV-91002.
+Vendor: Northwind Freight.
+Amount: EUR 15,800.
+Payment date: 3 October 2026.
+Register reference: FIN-BRIEF-2290.

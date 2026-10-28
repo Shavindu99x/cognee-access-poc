@@ -1,0 +1,14 @@
+organization: keel
+owner: keel.admin@keel.poc
+owner is not a superuser
+access control: on
+There is no director and no superuser.
+The dataset is named before ingestion.
+
+domain: hr
+dataset: keel_hr
+read: hr.user@keel.poc, hr.finance.user@keel.poc
+
+domain: finance
+dataset: keel_finance
+read: finance.user@keel.poc, hr.finance.user@keel.poc

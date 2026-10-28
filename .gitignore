@@ -1,0 +1,8 @@
+.env
+.venv/
+.cognee_system/
+.data_storage/
+__pycache__/
+*.pyc
+.DS_Store
+*.zip

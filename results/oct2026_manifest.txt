@@ -1,0 +1,44 @@
+source: management_report_oct2026.md
+unit: People and Culture, people rows of the department table, people actions, people facts from the appendix
+domain: hr
+dataset: hr_confidential
+canaries: DC-2026-07, P-118, band G6
+labeled_file: data/labeled/hr/oct2026_people.txt
+
+source: management_report_oct2026.md
+unit: Financial Performance, revenue and dividend from the foreword, budget column, finance actions, finance facts from the appendix
+domain: finance
+dataset: finance_confidential
+canaries: INV-91022, RCF-55120, CC-410
+labeled_file: data/labeled/finance/oct2026_finance.txt
+
+source: management_report_oct2026.md
+unit: Sales and Customers, Berlin showroom, sales action
+domain: sales
+dataset: sales_confidential
+canaries: Fjordline, Havbris, EUR 5,860,000
+labeled_file: data/labeled/sales/oct2026_sales.txt
+
+source: management_report_oct2026.md
+unit: Technology and Security, IT ticket column, phishing training action, security review
+domain: technology
+dataset: technology_confidential
+canaries: SEC-2026-031, VAULT-7781, LEDGER-01
+labeled_file: data/labeled/technology/oct2026_technology.txt
+
+source: management_report_oct2026.md
+unit: Legal and Compliance, contract-clause dispute, legal action
+domain: legal
+dataset: legal_confidential
+canaries: CL-4410, clause 14.2, EUR 2,000,000
+labeled_file: data/labeled/legal/oct2026_legal.txt
+
+source: management_report_oct2026.md
+unit: Operations Update, Colombo delivery centre, office move, operations action
+domain: operations
+dataset: operations_confidential
+canaries: Spreeufer 12, Friedrichstraße
+labeled_file: data/labeled/operations/oct2026_operations.txt
+
+omitted: the next report's publication date and the Office of the COO contact line. They name no department.
+omitted: the processing note that says to store the whole file in company_general and not split it. That note is not followed.

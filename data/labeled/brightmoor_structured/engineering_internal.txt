@@ -1,0 +1,41 @@
+department: engineering
+dataset: engineering_internal
+
+## Section 6: Product and Engineering
+
+| Owner | Audience | Classification |
+|---|---|---|
+| Jonas Feldmann, CTO | Engineering and product teams | Internal — Engineering |
+
+### 6.1 Summary
+
+Release 5.2 shipped on schedule and uptime met target. Database failover is the main reliability gap.
+
+### 6.2 Engineering indicators
+
+| Metric | Q2 2026 | Q3 2026 | Q3 target |
+|---|---|---|---|
+| Platform uptime | 99.91% | 99.95% | 99.95% |
+| Production deployments per week | 34 | 41 | 40 |
+| Engineers in the Colombo hub | 0 | 23 | 20 |
+
+### 6.3 Updates
+
+- Brightmoor Flow 5.2 was released on 18 August. It introduced the workflow designer, audit trails for admin actions and a 35 percent faster sync engine.
+- Platform uptime for the quarter was 99.95 percent. The longest outage lasted 47 minutes on 2 September and was caused by a failed database failover in the Frankfurt region; the post-mortem is filed as PM-0912.
+- Engineering moved 60 percent of batch workloads to spot instances during the quarter.
+- The Q4 roadmap prioritises single sign-on for all plans, the public API v3 (internal code name KESTREL) and offline mode for the mobile app.
+- A dependency scan found that the reporting module uses a library under the AGPL-3.0 licence. It will be replaced before the 5.3 release.
+- The multi-region failover project needs two additional site reliability engineers.
+
+### 6.4 Risks
+
+| Risk | Owner | Rating | Mitigation |
+|---|---|---|---|
+| Single-region database failover | CTO | High | Multi-region failover in Q4 |
+
+### 6.5 Actions and decisions
+
+- Replace the AGPL-licensed reporting library — owner: Reporting team — due before release 5.3.
+
+*End of Section 6*

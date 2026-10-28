@@ -1,0 +1,21 @@
+[
+  {
+    "name": "Mia Silva",
+    "kind": "person",
+    "datasets": {
+      "northwind_hr": {
+        "id": "6798c8bb-9bfc-5c6c-880d-95a70b75207d",
+        "matched": "DltRow"
+      },
+      "northwind_finance": {
+        "id": "c0e889d6-2e46-5377-b00b-2fa3e643c24e",
+        "matched": "DltRow"
+      },
+      "northwind_legal": {
+        "id": "a3b72e94-055a-586e-a77a-28be6ad425ca",
+        "matched": "DltRow"
+      }
+    },
+    "same_id_is_not_an_edge": true
+  }
+]

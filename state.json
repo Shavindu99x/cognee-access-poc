@@ -1,0 +1,20 @@
+{
+  "users": {
+    "admin": {
+      "email": "data.admin@nordlight.poc",
+      "id": "6593963d-ec1f-4e25-bc94-3ccecc825c78"
+    },
+    "hr": {
+      "email": "hr.user@nordlight.poc",
+      "id": "564dc11b-d615-4191-abf3-1d831e39bcad"
+    },
+    "finance": {
+      "email": "finance.user@nordlight.poc",
+      "id": "93bc3402-4015-4538-a0ed-309542f2e91b"
+    }
+  },
+  "datasets": {
+    "hr_confidential": "94c61cb0-f611-5698-84f5-c8ee70072606",
+    "finance_confidential": "408f74d0-748a-5970-842b-91f6c0fa89db"
+  }
+}

@@ -1,0 +1,23 @@
+employee_id,first_name,last_name,email,dept_code,department,job_title,role_type,allocation_pct,dept_start_date,manager_id,location,employment_type,hire_date,is_active
+EMP0005,Kasun,Zimmermann,kasun.zimmermann@northwind-mock.com,LEG,Legal,General Counsel,Primary,100,2017-06-21,,Colombo,Full-time,2017-06-21,TRUE
+EMP0007,Felix,Hoffmann,felix.hoffmann@northwind-mock.com,LEG,Legal,Legal Counsel,Secondary,40,2024-04-21,EMP0005,Munich,Full-time,2023-07-25,TRUE
+EMP0008,Marie,Fischer,marie.fischer@northwind-mock.com,LEG,Legal,Compliance Officer,Secondary,30,2019-06-20,EMP0005,Munich,Full-time,2019-01-10,TRUE
+EMP0013,Laura,Fischer,laura.fischer@northwind-mock.com,LEG,Legal,General Counsel,Secondary,30,2019-05-21,EMP0005,Munich,Full-time,2019-04-06,TRUE
+EMP0019,Oskar,Richter,oskar.richter@northwind-mock.com,LEG,Legal,Contract Manager,Primary,100,2015-09-29,EMP0005,Hamburg,Part-time,2015-09-29,FALSE
+EMP0023,Aisha,Zimmermann,aisha.zimmermann@northwind-mock.com,LEG,Legal,Paralegal,Primary,100,2025-01-25,EMP0005,Remote,Full-time,2025-01-25,TRUE
+EMP0027,Karl,Fernando,karl.fernando@northwind-mock.com,LEG,Legal,Privacy Officer,Primary,100,2017-10-26,EMP0005,Remote,Part-time,2017-10-26,TRUE
+EMP0028,Anna,Rossi,anna.rossi@northwind-mock.com,LEG,Legal,General Counsel,Secondary,20,2023-10-29,EMP0005,Berlin,Full-time,2023-01-31,TRUE
+EMP0029,Kasun,Richter,kasun.richter@northwind-mock.com,LEG,Legal,Paralegal,Primary,100,2023-08-15,EMP0005,Munich,Full-time,2023-08-15,TRUE
+EMP0031,Nina,Fernando,nina.fernando@northwind-mock.com,LEG,Legal,General Counsel,Primary,100,2023-07-18,EMP0005,Hamburg,Full-time,2023-07-18,TRUE
+EMP0035,Noah,Neumann,noah.neumann@northwind-mock.com,LEG,Legal,Privacy Officer,Secondary,30,2025-12-25,EMP0005,Munich,Full-time,2024-11-08,FALSE
+EMP0036,Max,Haddad,max.haddad@northwind-mock.com,LEG,Legal,Privacy Officer,Primary,100,2015-11-19,EMP0005,Berlin,Full-time,2015-11-19,TRUE
+EMP0037,Mia,Silva,mia.silva@northwind-mock.com,LEG,Legal,Paralegal,Secondary,20,2024-06-09,EMP0005,Hamburg,Full-time,2023-08-03,TRUE
+EMP0045,Mia,Fernando,mia.fernando@northwind-mock.com,LEG,Legal,Legal Counsel,Primary,100,2017-09-01,EMP0005,Munich,Full-time,2017-09-01,TRUE
+EMP0048,Emma,Rossi,emma.rossi@northwind-mock.com,LEG,Legal,Contract Manager,Secondary,20,2021-05-26,EMP0005,Munich,Full-time,2019-11-01,TRUE
+EMP0049,Karl,Jansen,karl.jansen@northwind-mock.com,LEG,Legal,Contract Manager,Primary,100,2015-08-10,EMP0005,Berlin,Full-time,2015-08-10,TRUE
+EMP0050,Ben,Fischer,ben.fischer@northwind-mock.com,LEG,Legal,Legal Counsel,Primary,80,2017-10-15,EMP0005,Hamburg,Full-time,2017-10-15,TRUE
+EMP0052,Max,Weber,max.weber@northwind-mock.com,LEG,Legal,Privacy Officer,Primary,100,2019-12-21,EMP0005,Remote,Full-time,2019-12-21,TRUE
+EMP0053,Kasun,Schmidt,kasun.schmidt@northwind-mock.com,LEG,Legal,General Counsel,Primary,100,2016-01-18,EMP0005,Hamburg,Full-time,2016-01-18,TRUE
+EMP0054,Nils,Perera,nils.perera@northwind-mock.com,LEG,Legal,General Counsel,Secondary,30,2018-11-29,EMP0005,Colombo,Part-time,2017-05-25,TRUE
+EMP0058,Jonas,Haddad,jonas.haddad@northwind-mock.com,LEG,Legal,Contract Manager,Primary,50,2023-04-02,EMP0005,Remote,Full-time,2023-04-02,TRUE
+EMP0060,Priya,Weber,priya.weber@northwind-mock.com,LEG,Legal,Compliance Officer,Primary,60,2024-07-19,EMP0005,Hamburg,Full-time,2024-07-19,TRUE

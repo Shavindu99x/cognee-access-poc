@@ -1,0 +1,11 @@
+department: hr
+dataset: hr_confidential
+
+NORDLIGHT SOLUTIONS — HUMAN RESOURCES
+Document: Q4 people section, separated from the management briefing
+Document reference: HR-BRIEF-8841
+Classification: HR CONFIDENTIAL
+
+Kasun Silva, employee EMP-5521, completed leadership review LEAD-8841 on 2 October 2026.
+His line manager for that review was Dilini Fernando.
+The review confirmed his role as Senior Procurement Manager in Operations.

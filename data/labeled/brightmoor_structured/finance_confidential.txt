@@ -1,0 +1,45 @@
+department: finance
+dataset: finance_confidential
+
+## Section 3: Finance
+
+| Owner | Audience | Classification |
+|---|---|---|
+| Dinesh Wickramasinghe, CFO | Finance team and Management Board | Finance Confidential |
+
+### 3.1 Summary
+
+Annual recurring revenue reached EUR 38.4 million, up 9.1 percent on Q2, and the operating loss narrowed to EUR 1,870,000.
+
+### 3.2 Financial indicators
+
+| Metric | Q2 2026 | Q3 2026 | Q3 target |
+|---|---|---|---|
+| Annual recurring revenue (EUR m) | 35.2 | 38.4 | 37.5 |
+| Quarterly revenue (EUR) | 8,540,000 | 9,310,000 | 9,050,000 |
+| Gross margin | 71.8% | 73.4% | 72.0% |
+| Net cash burn (EUR) | 2,410,000 | 2,240,000 | 2,300,000 |
+| Cash at quarter end (EUR) | 23,890,000 | 21,650,000 | 21,000,000 |
+| Days sales outstanding | 41 | 52 | 45 |
+
+### 3.3 Updates
+
+- Revenue for the quarter was EUR 9,310,000 against a budget of EUR 9,050,000. Gross margin improved to 73.4 percent because of lower hosting cost per customer.
+- Net cash burn was EUR 2,240,000 for the quarter. Cash at the end of September was EUR 21,650,000, which gives a runway of 29 months at the current burn rate.
+- Cloud hosting cost for Q3 was EUR 412,300, which is EUR 38,000 below budget.
+- Two invoices from Medrava Health GmbH, INV-24417 and INV-24452, totalling EUR 188,900, are more than 60 days overdue.
+- The finance team has completed the data room for the planned financing round.
+- Two additional engineering hires for the failover project will be funded from the EUR 38,000 hosting underspend and the Q4 contingency of EUR 150,000.
+
+### 3.4 Risks
+
+| Risk | Owner | Rating | Mitigation |
+|---|---|---|---|
+| Rising DSO and overdue Medrava invoices | CFO | Medium | Weekly collections call |
+
+### 3.5 Actions and decisions
+
+- Approve the Q4 operating expense budget of EUR 9,800,000.
+- Prepare the Q4 cash forecast for the board — owner: CFO — due 20 November.
+
+*End of Section 3*

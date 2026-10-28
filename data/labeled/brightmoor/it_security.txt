@@ -1,0 +1,17 @@
+department: it_security
+dataset: brightmoor_it_security
+
+BRIGHTMOOR SOFTWARE — SECURITY AND IT
+Q3 2026 management report, security and IT facts only.
+
+Open critical vulnerabilities: Q2 3, Q3 1, target 0.
+
+On 14 August an internal API key was committed to a public code repository and was exposed for 3 hours before automated scanning detected it. The key was revoked, logs show no unauthorised use, and the incident is recorded as SEC-INC-0814.
+
+The annual penetration test by an external firm found 1 critical and 4 high findings. The critical finding, an authorisation bypass in the export endpoint (finding PT-26-01), was fixed on 9 September. Two high findings remain open.
+
+The SOC 2 Type II observation period ends on 31 October and the auditor's report is expected in January.
+
+The quarterly access review removed 37 accounts belonging to people who had left the company. Eleven of those accounts still had administrator rights in the billing system.
+
+Lukas Hoffmann presented the findings of the API key incident.

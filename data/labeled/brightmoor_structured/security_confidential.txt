@@ -1,0 +1,39 @@
+department: security
+dataset: security_confidential
+
+## Section 7: Security and IT
+
+| Owner | Audience | Classification |
+|---|---|---|
+| Lukas Hoffmann, CISO | Security team, CTO and Management Board | Security Confidential |
+
+### 7.1 Summary
+
+One security incident with no data loss. The critical penetration test finding is fixed; two high findings remain open.
+
+### 7.2 Security indicators
+
+| Metric | Q2 2026 | Q3 2026 | Q3 target |
+|---|---|---|---|
+| Open critical vulnerabilities | 3 | 1 | 0 |
+| Open high findings | 5 | 2 | 0 |
+| Leaver accounts removed in access review | 22 | 37 | - |
+
+### 7.3 Updates
+
+- On 14 August an internal API key was committed to a public code repository and was exposed for 3 hours before automated scanning detected it. The key was revoked, logs show no unauthorised use, and the incident is recorded as SEC-INC-0814.
+- The annual penetration test by an external firm found 1 critical and 4 high findings. The critical finding, an authorisation bypass in the export endpoint (finding PT-26-01), was fixed on 9 September; two high findings remain open.
+- The SOC 2 Type II observation period ends on 31 October and the auditor's report is expected in January.
+- The quarterly access review removed 37 accounts belonging to people who had left the company. Eleven of those accounts still had administrator rights in the billing system.
+
+### 7.4 Risks
+
+| Risk | Owner | Rating | Mitigation |
+|---|---|---|---|
+| Exposure of credentials in code repositories | CISO | Medium | Secret scanning on all repositories |
+
+### 7.5 Actions and decisions
+
+- Close the two open high findings — owner: Security team — due 30 November.
+
+*End of Section 7*

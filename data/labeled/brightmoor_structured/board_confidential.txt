@@ -1,0 +1,41 @@
+department: board
+dataset: board_confidential
+
+## Section 2: Board and Strategy
+
+| Owner | Audience | Classification |
+|---|---|---|
+| Mareike Lorenz, CEO | Board members only | Board Confidential |
+
+### 2.1 Summary
+
+Two strategic transactions are in preparation: the Series B financing and the planned acquisition of Quillstream Analytics Ltd. Both need board decisions in November.
+
+### 2.2 Status of board matters
+
+| Matter | Status |
+|---|---|
+| Series B term sheet | Received from Corvane Ventures |
+| Quillstream Analytics due diligence | Awaiting board approval |
+| Berlin support team restructuring | Under evaluation |
+| CEO succession | Succession committee to be formed in Q1 2027 |
+
+### 2.3 Updates
+
+- Corvane Ventures has issued a non-binding term sheet for EUR 30 million at a pre-money valuation of EUR 165 million, with exclusivity requested until 30 November.
+- Due diligence on Quillstream Analytics Ltd is planned to start on 17 November, subject to board approval. The indicative price range is EUR 22 to 26 million, payable 60 percent in cash and 40 percent in shares.
+- The executive team is evaluating a restructuring of the Berlin support team, which could affect up to 14 roles. This must not be communicated to employees before the board decision.
+- Mareike Lorenz has informed the chair that she intends to step down as CEO at the end of 2027; a succession committee will be formed in Q1.
+
+### 2.4 Risks
+
+| Risk | Owner | Rating | Mitigation |
+|---|---|---|---|
+| Disclosure of the Quillstream discussions before signing | CEO | High | Code name only in internal channels |
+
+### 2.5 Actions and decisions
+
+- Approve the start of due diligence on Quillstream Analytics Ltd.
+- Grant exclusivity to Corvane Ventures for the Series B until 30 November.
+
+*End of Section 2*

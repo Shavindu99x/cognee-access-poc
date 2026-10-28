@@ -1,0 +1,24 @@
+employee_id,first_name,last_name,email,dept_code,department,job_title,role_type,allocation_pct,dept_start_date,manager_id,location,employment_type,hire_date,is_active
+EMP0003,Jan,Müller,jan.mueller@northwind-mock.com,MKT,Marketing,Head of Marketing,Primary,100,2015-05-03,,Berlin,Full-time,2015-05-03,TRUE
+EMP0007,Felix,Hoffmann,felix.hoffmann@northwind-mock.com,MKT,Marketing,Campaign Analyst,Primary,60,2023-07-25,EMP0003,Munich,Full-time,2023-07-25,TRUE
+EMP0008,Marie,Fischer,marie.fischer@northwind-mock.com,MKT,Marketing,SEO Specialist,Primary,50,2019-01-10,EMP0003,Munich,Full-time,2019-01-10,TRUE
+EMP0009,Sofia,Jansen,sofia.jansen@northwind-mock.com,MKT,Marketing,Social Media Lead,Primary,70,2020-02-25,EMP0003,Remote,Full-time,2020-02-25,TRUE
+EMP0010,Marie,Weber,marie.weber@northwind-mock.com,MKT,Marketing,Social Media Lead,Primary,100,2021-03-11,EMP0003,Munich,Part-time,2021-03-11,TRUE
+EMP0012,Sofia,Rossi,sofia.rossi@northwind-mock.com,MKT,Marketing,SEO Specialist,Secondary,30,2018-12-04,EMP0003,Munich,Contractor,2017-07-22,TRUE
+EMP0013,Laura,Fischer,laura.fischer@northwind-mock.com,MKT,Marketing,SEO Specialist,Primary,50,2019-04-06,EMP0003,Munich,Full-time,2019-04-06,TRUE
+EMP0014,Finn,Becker,finn.becker@northwind-mock.com,MKT,Marketing,Brand Designer,Secondary,20,2021-02-16,EMP0003,Munich,Full-time,2019-02-25,TRUE
+EMP0015,David,Novak,david.novak@northwind-mock.com,MKT,Marketing,Marketing Manager,Primary,100,2022-08-31,EMP0003,Berlin,Full-time,2022-08-31,TRUE
+EMP0016,Clara,Silva,clara.silva@northwind-mock.com,MKT,Marketing,Brand Designer,Secondary,20,2023-08-04,EMP0003,Hamburg,Full-time,2023-03-06,TRUE
+EMP0018,Julia,Müller,julia.mueller@northwind-mock.com,MKT,Marketing,Social Media Lead,Primary,60,2017-07-27,EMP0003,Berlin,Part-time,2017-07-27,TRUE
+EMP0020,Omar,Novak,omar.novak@northwind-mock.com,MKT,Marketing,Content Strategist,Secondary,40,2018-08-06,EMP0003,Hamburg,Full-time,2018-07-12,TRUE
+EMP0022,Max,Jansen,max.jansen@northwind-mock.com,MKT,Marketing,Brand Designer,Primary,100,2021-04-18,EMP0003,Remote,Full-time,2021-04-18,TRUE
+EMP0026,Jan,Wang,jan.wang@northwind-mock.com,MKT,Marketing,SEO Specialist,Primary,100,2015-09-18,EMP0003,Colombo,Full-time,2015-09-18,TRUE
+EMP0028,Anna,Rossi,anna.rossi@northwind-mock.com,MKT,Marketing,Campaign Analyst,Secondary,30,2023-08-01,EMP0003,Berlin,Full-time,2023-01-31,TRUE
+EMP0034,Ravi,Schmidt,ravi.schmidt@northwind-mock.com,MKT,Marketing,Social Media Lead,Primary,100,2021-09-19,EMP0003,Munich,Full-time,2021-09-19,TRUE
+EMP0043,Dilini,Koch,dilini.koch@northwind-mock.com,MKT,Marketing,Content Strategist,Primary,100,2021-08-07,EMP0003,Hamburg,Full-time,2021-08-07,TRUE
+EMP0044,Jonas,Koch,jonas.koch@northwind-mock.com,MKT,Marketing,Social Media Lead,Primary,50,2015-10-04,EMP0003,Berlin,Part-time,2015-10-04,TRUE
+EMP0046,Elias,Silva,elias.silva@northwind-mock.com,MKT,Marketing,Marketing Manager,Primary,100,2016-06-25,EMP0003,Remote,Full-time,2016-06-25,TRUE
+EMP0047,Max,Perera,max.perera@northwind-mock.com,MKT,Marketing,Content Strategist,Secondary,20,2025-08-13,EMP0003,Colombo,Full-time,2024-01-21,TRUE
+EMP0048,Emma,Rossi,emma.rossi@northwind-mock.com,MKT,Marketing,Brand Designer,Primary,50,2019-11-01,EMP0003,Munich,Full-time,2019-11-01,TRUE
+EMP0056,Karl,Klein,karl.klein@northwind-mock.com,MKT,Marketing,Campaign Analyst,Secondary,20,2020-09-01,EMP0003,Remote,Full-time,2019-09-29,TRUE
+EMP0057,Nils,Wagner,nils.wagner@northwind-mock.com,MKT,Marketing,Content Strategist,Primary,100,2017-02-16,EMP0003,Munich,Full-time,2017-02-16,TRUE

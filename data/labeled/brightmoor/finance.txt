@@ -1,0 +1,25 @@
+department: finance
+dataset: brightmoor_finance
+
+BRIGHTMOOR SOFTWARE — FINANCE
+Q3 2026 management report, finance facts only.
+
+Annual recurring revenue reached EUR 38.4 million, up 9.1 percent on Q2, and the operating loss narrowed to EUR 1,870,000.
+
+Annual recurring revenue (EUR m): Q2 35.2, Q3 38.4, target 37.5. Gross margin: Q2 71.8 percent, Q3 73.4 percent, target 72.0 percent. Net revenue retention: Q2 112 percent, Q3 114 percent, target 115 percent.
+
+Cloud hosting cost for Q3 was EUR 412,300, which is EUR 38,000 below budget.
+
+Revenue for the quarter was EUR 9,310,000 against a budget of EUR 9,050,000. Gross margin improved to 73.4 percent because of lower hosting cost per customer.
+
+Net cash burn was EUR 2,240,000 for the quarter. Cash at the end of September was EUR 21,650,000, which gives a runway of 29 months at the current burn rate.
+
+Days sales outstanding rose from 41 to 52 days. Two invoices from Medrava Health GmbH, INV-24417 and INV-24452, totalling EUR 188,900, are more than 60 days overdue.
+
+The finance team has completed the data room for the planned Series B round. Corvane Ventures has issued a non-binding term sheet for EUR 30 million at a pre-money valuation of EUR 165 million, with exclusivity requested until 30 November.
+
+Finance is reviewing the commission on the Tessaro deal.
+
+Dinesh Wickramasinghe confirmed that the hiring can be funded from the EUR 38,000 hosting underspend and the Q4 contingency of EUR 150,000.
+
+The board is asked to approve the Q4 operating expense budget of EUR 9,800,000.

@@ -1,0 +1,23 @@
+employee_id,first_name,last_name,email,dept_code,department,job_title,role_type,allocation_pct,dept_start_date,manager_id,location,employment_type,hire_date,is_active
+EMP0004,Priya,Wang,priya.wang@northwind-mock.com,HR,Human Resources,Head of HR,Primary,60,2015-04-19,,Remote,Full-time,2015-04-19,FALSE
+EMP0006,Anna,Becker,anna.becker@northwind-mock.com,HR,Human Resources,HR Manager,Primary,70,2022-10-30,EMP0004,Colombo,Full-time,2022-10-30,TRUE
+EMP0009,Sofia,Jansen,sofia.jansen@northwind-mock.com,HR,Human Resources,Recruiter,Secondary,30,2020-06-10,EMP0004,Remote,Full-time,2020-02-25,TRUE
+EMP0011,Mei,Neumann,mei.neumann@northwind-mock.com,HR,Human Resources,HR Business Partner,Primary,100,2021-06-22,EMP0004,Hamburg,Full-time,2021-06-22,TRUE
+EMP0012,Sofia,Rossi,sofia.rossi@northwind-mock.com,HR,Human Resources,L&D Coordinator,Primary,70,2017-07-22,EMP0004,Munich,Contractor,2017-07-22,TRUE
+EMP0014,Finn,Becker,finn.becker@northwind-mock.com,HR,Human Resources,L&D Coordinator,Primary,80,2019-02-25,EMP0004,Munich,Full-time,2019-02-25,FALSE
+EMP0016,Clara,Silva,clara.silva@northwind-mock.com,HR,Human Resources,L&D Coordinator,Secondary,30,2024-10-22,EMP0004,Hamburg,Full-time,2023-03-06,TRUE
+EMP0017,Marie,Richter,marie.richter@northwind-mock.com,HR,Human Resources,HR Business Partner,Primary,100,2025-05-18,EMP0004,Remote,Full-time,2025-05-18,TRUE
+EMP0021,Oskar,Nakamura,oskar.nakamura@northwind-mock.com,HR,Human Resources,HR Business Partner,Primary,60,2020-02-23,EMP0004,Hamburg,Full-time,2020-02-23,TRUE
+EMP0028,Anna,Rossi,anna.rossi@northwind-mock.com,HR,Human Resources,HR Business Partner,Primary,50,2023-01-31,EMP0004,Berlin,Full-time,2023-01-31,TRUE
+EMP0030,Jan,Becker,jan.becker@northwind-mock.com,HR,Human Resources,Payroll Specialist,Primary,50,2020-02-02,EMP0004,Berlin,Contractor,2020-02-02,TRUE
+EMP0033,Felix,Neumann,felix.neumann@northwind-mock.com,HR,Human Resources,L&D Coordinator,Primary,100,2023-07-21,EMP0004,Hamburg,Full-time,2023-07-21,TRUE
+EMP0035,Noah,Neumann,noah.neumann@northwind-mock.com,HR,Human Resources,HR Business Partner,Primary,50,2024-11-08,EMP0004,Munich,Full-time,2024-11-08,TRUE
+EMP0037,Mia,Silva,mia.silva@northwind-mock.com,HR,Human Resources,HR Manager,Secondary,30,2025-02-14,EMP0004,Hamburg,Full-time,2023-08-03,TRUE
+EMP0038,Amelie,Silva,amelie.silva@northwind-mock.com,HR,Human Resources,Payroll Specialist,Primary,100,2016-11-07,EMP0004,Munich,Full-time,2016-11-07,TRUE
+EMP0041,Finn,Krüger,finn.krueger@northwind-mock.com,HR,Human Resources,HR Manager,Primary,100,2025-02-01,EMP0004,Remote,Full-time,2025-02-01,TRUE
+EMP0042,Max,Koch,max.koch@northwind-mock.com,HR,Human Resources,Recruiter,Secondary,30,2017-12-23,EMP0004,Munich,Full-time,2015-09-20,FALSE
+EMP0044,Jonas,Koch,jonas.koch@northwind-mock.com,HR,Human Resources,HR Generalist,Secondary,20,2017-10-08,EMP0004,Berlin,Part-time,2015-10-04,TRUE
+EMP0050,Ben,Fischer,ben.fischer@northwind-mock.com,HR,Human Resources,Payroll Specialist,Secondary,20,2019-11-15,EMP0004,Hamburg,Full-time,2017-10-15,TRUE
+EMP0058,Jonas,Haddad,jonas.haddad@northwind-mock.com,HR,Human Resources,Payroll Specialist,Secondary,50,2024-04-25,EMP0004,Remote,Full-time,2023-04-02,TRUE
+EMP0059,Amelie,Fernando,amelie.fernando@northwind-mock.com,HR,Human Resources,HR Business Partner,Primary,100,2025-04-23,EMP0004,Remote,Full-time,2025-04-23,TRUE
+EMP0060,Priya,Weber,priya.weber@northwind-mock.com,HR,Human Resources,HR Business Partner,Secondary,40,2025-02-28,EMP0004,Hamburg,Full-time,2024-07-19,TRUE

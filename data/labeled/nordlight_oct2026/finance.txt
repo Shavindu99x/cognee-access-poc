@@ -1,0 +1,26 @@
+department: finance
+dataset: nordlight_finance
+
+NORDLIGHT SOLUTIONS — FINANCE
+October 2026 management report. Finance facts only.
+
+Group revenue for the month was EUR 2,418,600, which is 6.2 percent above plan, and the board has approved an interim dividend reserve of EUR 350,000.
+
+Operating expenses for October were EUR 1,602,300 against a budget of EUR 1,650,000. Year-to-date operating spend is EUR 15,284,900, or 93.1 percent of the annual budget.
+
+Cash at bank on 31 October was EUR 3,970,450. The revolving credit facility with Nordbank (facility number RCF-55120) remains undrawn.
+
+Kasun Silva approved invoice INV-91022 from Bluewave Logistics GmbH for EUR 64,800 on 14 October. Total payments to Bluewave Logistics GmbH this year now stand at EUR 611,200.
+
+The courier penalty of EUR 18,500 charged by Bluewave Logistics GmbH for late pickups was booked to cost centre CC-410.
+
+| Department | Q4 budget (EUR) |
+|---|---|
+| Technology | 640,000 |
+| Sales | 410,000 |
+| Operations | 455,000 |
+| Administration | 210,000 |
+
+Prepare the Q4 cash forecast for the board. Owner: Ruwan Jayasinghe. Due 20 November.
+
+The retention bonus will be charged to cost centre CC-410, which is already 6 percent over budget after the courier penalty. Ruwan Jayasinghe asked that any further bonuses in Operations be approved by Finance first.

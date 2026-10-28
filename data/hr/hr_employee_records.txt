@@ -1,0 +1,26 @@
+NORDLIGHT SOLUTIONS — HUMAN RESOURCES
+Document: Employee Records Extract, October 2026
+Record set: HR-REC-5521
+Classification: HR CONFIDENTIAL
+
+Employee: Kasun Silva
+Employee ID: EMP-5521
+Role: Senior Procurement Manager
+Department: Operations
+Start date: 4 February 2019
+Salary band: Band G7
+Annual leave remaining in 2026: 11 days
+Line manager: Dilini Fernando
+
+Employee: Tharushi Perera
+Employee ID: EMP-6043
+Role: Data Engineer
+Department: Technology
+Start date: 15 June 2023
+Salary band: Band G5
+Annual leave remaining in 2026: 19 days
+Line manager: Kasun Silva
+
+Notes:
+Tharushi Perera completed the "Lakehouse Foundations" internal training in September 2026.
+Kasun Silva is scheduled for a performance review on 12 November 2026.

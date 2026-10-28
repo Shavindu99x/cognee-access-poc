@@ -1,0 +1,13 @@
+source: data/incoming/q4_management_briefing.txt
+unit: People
+domain: hr
+dataset: hr_confidential
+canaries: HR-BRIEF-8841, LEAD-8841
+labeled_file: data/labeled/hr/q4_people_section.txt
+
+source: data/incoming/q4_management_briefing.txt
+unit: Payments
+domain: finance
+dataset: finance_confidential
+canaries: FIN-BRIEF-2290, INV-91002
+labeled_file: data/labeled/finance/q4_payments_section.txt

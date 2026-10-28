@@ -1,0 +1,29 @@
+NORDLIGHT SOLUTIONS — FINANCE
+Document: Vendor Payments Register, September 2026
+Register reference: FIN-PAY-0417
+Classification: FINANCE CONFIDENTIAL
+
+Payment 1
+Invoice number: INV-90417
+Vendor: Bluewave Logistics GmbH
+Amount: EUR 182,400
+Payment date: 9 September 2026
+Approved by: Kasun Silva
+
+Payment 2
+Invoice number: INV-90433
+Vendor: Coralpeak Cloud Services
+Amount: EUR 96,750
+Payment date: 18 September 2026
+Approved by: Ruwan Jayasinghe
+
+Payment 3
+Invoice number: INV-90468
+Vendor: Bluewave Logistics GmbH
+Amount: EUR 41,300
+Payment date: 27 September 2026
+Approved by: Kasun Silva
+
+Notes:
+Bluewave Logistics GmbH has payment terms of 30 days net.
+The total paid to Bluewave Logistics GmbH in September 2026 was EUR 223,700.
