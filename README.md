@@ -179,10 +179,8 @@ An earlier version of this skill read a mixed report and separated it before Cog
 | `.cursor/rules/dispatcher.mdc` | Loads every session and points at the two files above |
 | `poc_config.py` | Users, dataset names, canaries, storage paths |
 | `step1_ingest.py` … `step4_inspect_storage.py` | The original two-reader proof |
-| `results/isolation_report.md` | 16 of 16 isolation checks |
-| `results/oct2026_skill_test.md` | The October report run |
 
-Generated when the proof runs: `.cognee_system/`, `.data_storage/`, `state.json`, `results/`.
+The test scripts and their reports are on the `tests` branch. `main` keeps the workflow. A proof run writes `.cognee_system/`, `.data_storage/`, `state.json`, and `results/` on this machine.
 
 ---
 
